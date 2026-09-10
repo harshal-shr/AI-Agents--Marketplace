@@ -196,3 +196,72 @@ function submitAgent() {
 
     return false;
 }
+
+function loginUser() {
+
+    let userType = document.getElementById("userType").value;
+    let email = document.getElementById("loginEmail").value.trim();
+    let password = document.getElementById("loginPassword").value;
+
+    if (userType === "") {
+        alert("Please select user type.");
+        return false;
+    }
+
+    if (email === "") {
+        alert("Please enter your email.");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must contain at least 6 characters.");
+        return false;
+    }
+
+    alert("Login successful!");
+
+    return false;
+}
+
+
+function showRegister() {
+
+    let modal = new bootstrap.Modal(
+        document.getElementById("registerModal")
+    );
+
+    modal.show();
+}
+
+
+function registerUser() {
+
+    let name = document.getElementById("registerName").value.trim();
+    let email = document.getElementById("registerEmail").value.trim();
+    let type = document.getElementById("registerType").value;
+    let password = document.getElementById("registerPassword").value;
+
+    if (name === "") {
+        alert("Please enter your full name.");
+        return false;
+    }
+
+    if (email === "") {
+        alert("Please enter your email.");
+        return false;
+    }
+
+    if (type === "") {
+        alert("Please select account type.");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must contain at least 6 characters.");
+        return false;
+    }
+
+    alert("Account created successfully!");
+
+    return false;
+}
