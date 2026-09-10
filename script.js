@@ -106,3 +106,42 @@ function contactDeveloper() {
 function buyAgent() {
     alert("Thank you! Your agent purchase request has been received.");
 }
+
+
+function submitRequirement() {
+
+    let businessName = document.getElementById("businessName").value.trim();
+    let email = document.getElementById("businessEmail").value.trim();
+    let category = document.getElementById("automationCategory").value;
+    let requirement = document.getElementById("requirement").value.trim();
+    let budget = document.getElementById("budget").value;
+
+    if (businessName === "") {
+        alert("Please enter your business name.");
+        return false;
+    }
+
+    if (email === "") {
+        alert("Please enter your email address.");
+        return false;
+    }
+
+    if (category === "") {
+        alert("Please select an automation category.");
+        return false;
+    }
+
+    if (requirement === "") {
+        alert("Please describe your requirement.");
+        return false;
+    }
+
+    if (budget === "" || budget <= 0) {
+        alert("Please enter a valid budget.");
+        return false;
+    }
+
+    alert("Your business requirement has been posted successfully!");
+
+    return false;
+}
