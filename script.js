@@ -145,3 +145,54 @@ function submitRequirement() {
 
     return false;
 }
+
+
+function submitAgent() {
+
+    let developerName = document.getElementById("developerName").value.trim();
+    let email = document.getElementById("developerEmail").value.trim();
+    let agentName = document.getElementById("agentName").value.trim();
+    let category = document.getElementById("agentCategory").value;
+    let description = document.getElementById("agentDescription").value.trim();
+    let technology = document.getElementById("technology").value.trim();
+    let price = document.getElementById("agentPrice").value;
+
+    if (developerName === "") {
+        alert("Please enter developer name.");
+        return false;
+    }
+
+    if (email === "") {
+        alert("Please enter email address.");
+        return false;
+    }
+
+    if (agentName === "") {
+        alert("Please enter AI agent name.");
+        return false;
+    }
+
+    if (category === "") {
+        alert("Please select a category.");
+        return false;
+    }
+
+    if (description === "") {
+        alert("Please describe your AI agent.");
+        return false;
+    }
+
+    if (technology === "") {
+        alert("Please enter the technology used.");
+        return false;
+    }
+
+    if (price === "" || price <= 0) {
+        alert("Please enter a valid price.");
+        return false;
+    }
+
+    alert("Your AI Agent has been published successfully!");
+
+    return false;
+}
