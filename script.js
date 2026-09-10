@@ -94,3 +94,14 @@ $(document).ready(function () {
     );
 
 });
+
+// Contact Developer
+function contactDeveloper() {
+    alert("Developer contact request sent successfully!");
+}
+
+// Buy Agent
+function buyAgent() {
+    alert("Thank you! Your agent purchase request has been received.");
+}
+
