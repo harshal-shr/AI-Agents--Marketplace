@@ -1,0 +1,99 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* Hero Section */
+
+.hero-section {
+    background: linear-gradient(135deg, #111827, #1e3a8a);
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero-section h1 span {
+    color: #60a5fa;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin: 25px 0;
+    max-width: 600px;
+}
+
+
+/* AI Box */
+
+.ai-box {
+    font-size: 130px;
+    padding: 40px;
+}
+
+
+/* Feature Cards */
+
+.feature-card {
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+/* How It Works */
+
+.how-section {
+    background-color: #f5f7fb;
+}
+
+.step-number {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    margin: auto;
+    margin-bottom: 15px;
+
+    background-color: #0d6efd;
+    color: white;
+
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        text-align: center;
+        padding: 70px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .ai-box {
+        font-size: 80px;
+        margin-top: 30px;
+    }
+
+}
