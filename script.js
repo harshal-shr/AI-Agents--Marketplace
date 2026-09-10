@@ -1,10 +1,55 @@
-// Welcome message
+// ===============================
+// AI AGENT MARKETPLACE JAVASCRIPT
+// ===============================
+
+
+// 1. Welcome Function
 function showWelcome() {
     alert("Welcome to AI AgentHub!");
 }
 
-// Search validation
+
+// 2. Search Agents Function
+function searchAgents() {
+
+    let searchText = $("#searchBox").val().toLowerCase();
+
+    $(".agent-item").each(function () {
+
+        let agentName = $(this).find("h4").text().toLowerCase();
+
+        if (agentName.includes(searchText)) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+
+    });
+}
+
+
+// 3. Filter Agents Function
+function filterAgents() {
+
+    let category = $("#categoryFilter").val();
+
+    $(".agent-item").each(function () {
+
+        let agentCategory = $(this).data("category");
+
+        if (category === "all" || agentCategory === category) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+
+    });
+}
+
+
+// 4. Validate Search Function
 function validateSearch() {
+
     let search = document.getElementById("searchBox");
 
     if (search && search.value.trim() === "") {
@@ -15,15 +60,36 @@ function validateSearch() {
     return true;
 }
 
-// Button animation using jQuery
+
+// ===============================
+// jQuery DOM + ANIMATION
+// ===============================
+
 $(document).ready(function () {
 
-    $(".feature-card").hover(
+    // Search while typing
+    $("#searchBox").on("keyup", function () {
+        searchAgents();
+    });
+
+
+    // Category filter
+    $("#categoryFilter").on("change", function () {
+        filterAgents();
+    });
+
+
+    // Card hover animation
+    $(".card").hover(
         function () {
-            $(this).fadeTo("fast", 0.85);
+            $(this).animate({
+                marginTop: "-5px"
+            }, 200);
         },
         function () {
-            $(this).fadeTo("fast", 1);
+            $(this).animate({
+                marginTop: "0px"
+            }, 200);
         }
     );
 
